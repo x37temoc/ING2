@@ -1,4 +1,4 @@
 ING2
 ====
+Proyecto para el curso de Ingeniería de Software II
 
-Inge de soft 2 LCC
