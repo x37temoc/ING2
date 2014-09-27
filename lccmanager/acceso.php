@@ -1,7 +1,7 @@
 <?php
 	session_start();
     include("header.php");
-	if(!isset($_SESSION['user'])) header("Location: nuevo.php");
+	if(!isset($_SESSION['user'])) header("Location: index.php");
 	// Create connection
 	$con = mysqli_connect("localhost","root","","lcc");
 	// Check connection

@@ -1,10 +1,9 @@
 <html>
   <script>
-        console.log("fuck");
         alert("Materia agregada");
-      
+        location.href = "admin.php";
    </script>
-   </html>
+</html>
 <?php
 	session_start();
     include("header.php");

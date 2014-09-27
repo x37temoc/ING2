@@ -4,11 +4,10 @@
         if(!isset($_SESSION['user'])) header("Location: nuevo.php");
 ?>
     <body>
-       <img src="abstract-wallpaper-gradient-blue-wallpapers.jpg" alt="lcc" id="img_admin">
         <div class="container-fluid">
             <nav class="navbar navbar-inverse" role="navigation" id="barra">
                 <div class="navbar-header">
-                    <img class="img-circle" align="left" src="foto.jpg" alt="Unison">
+                    <img class="img-circle" align="left" src="../img/foto.jpg" alt="Unison">
                     <p class="navbar-brand">
                         Universidad de Sonora<br>
                         Licenciatura en Ciencias de la Computacion
@@ -33,7 +32,7 @@
                 </div>
             </nav>
             <div class="table-responsive">
-                <table class="table table-hover" style="color: white;">
+                <table class="table table-hover">
                 <thead>
                    <tr>
                         <th>Materia</th>

@@ -1,3 +1,9 @@
+<html>
+  <script>
+        alert("Registro de usuario exitoso");
+        location.href = "index.php";
+   </script>
+</html>
 <?php
 // Create connection
 $con = mysqli_connect("localhost","root","","lcc");
@@ -5,8 +11,6 @@ $con = mysqli_connect("localhost","root","","lcc");
 // Check connection
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}else{
-    echo "Conexion exitosa !<br>";
 }
 
 $mat = $_POST['inp-mat'];
@@ -15,7 +19,7 @@ $correo = $_POST['email'];
 
 $consulta = mysqli_query($con, "INSERT INTO usuarios (matricula, pass, email)
 VALUES ('$mat', '$pass', '$correo')");
-if ($consulta){
-    echo "Registro exitoso";
+if (!mysqli_query($con,$consulta)){
+    die('Error: '. mysqli_error($con));
 }
 ?>

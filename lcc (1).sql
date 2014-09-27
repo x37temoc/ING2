@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-09-2014 a las 07:27:47
+-- Tiempo de generación: 27-09-2014 a las 22:55:31
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -30,8 +30,20 @@ CREATE TABLE IF NOT EXISTS `clase` (
   `nombre` varchar(40) NOT NULL,
   `instructor` varchar(40) NOT NULL,
   `horario` varchar(40) NOT NULL,
-  `desc` varchar(200) NOT NULL
+  `descripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `clase`
+--
+
+INSERT INTO `clase` (`nombre`, `instructor`, `horario`, `descripcion`) VALUES
+('adas', 'kkk', 'mmm', 'mm'),
+('adas', 'kkk', 'mmm', 'mm'),
+('Ing. Software', 'Juan Pablo', 'lun-meir-jue 10:00am-11:00am', 'Es una super materia bien cool'),
+('prueba', 'prueba', 'prueba', 'prueba'),
+('prueba', 'prueba', 'prueba', 'prueba'),
+('prueba', 'prueba', 'prueba', 'prueba');
 
 -- --------------------------------------------------------
 
@@ -52,7 +64,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`matricula`, `pass`, `email`, `admin`) VALUES
-('a212209119', 'YWxnbw==', '', 1);
+('a212209119', 'YWxnbw==', '', 1),
+('aaaa', 'YWxnbzI=', 'algo@aaa', 0),
+('algo', 'YWxnbw==', 'algo@algo', 0),
+('eit', 'ZWl0', 'algo@algo', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

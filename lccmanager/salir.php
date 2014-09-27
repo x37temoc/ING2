@@ -3,5 +3,5 @@
     session_unset();
     session_destroy();
     session_write_close();
-    header("Location: nuevo.php");
+    header("Location: index.php");
 ?>

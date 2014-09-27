@@ -1,13 +1,13 @@
 <?php
 	session_start();
 	include("header.php");
-	if(!isset($_SESSION['user'])) header("Location: nuevo.php");
+	if(!isset($_SESSION['user'])) header("Location: index.php");
 ?>
     <body id="bod_log">
        <div class="container-fluid">
 			<nav class="navbar navbar-inverse" role="navigation" id="barra">
 				<div class="navbar-header">
-					<img class="img-circle" align="left" src="foto.jpg" alt="Unison">
+					<img class="img-circle" align="left" src="../img/foto.jpg" alt="Unison">
 					<p class="navbar-brand">
 						Universidad de Sonora<br>
 						Licenciatura en Ciencias de la Computacion
@@ -32,11 +32,38 @@
 					</ul>
 				</div>
 			</nav>
-			Bienvenido >>
-			<?php
-				echo $_SESSION['user']."<br>Tus visitas >> ".$_SESSION['views'];
-				
-			?>
+			<h2 align="center">Materias disponibles</h2>
+			<div class="table-responsive">
+                <table class="table table-hover">
+                <thead>
+                   <tr>
+                        <th>Materia</th>
+                        <th>Profesor</th>
+                        <th>Horario</th>
+                        <th>Descripcion</th>
+                    </tr>
+                    <?php
+                        $con = mysqli_connect("localhost","root","","lcc");
+	                   // Check connection
+                        if (mysqli_connect_errno()) {
+                            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                        }
+                        $sql = mysqli_query($con,"SELECT * FROM clase");
+                        if ($sql){
+                            while($row = mysqli_fetch_array($sql)){
+                                echo "<tr>";
+                                echo "<td>".$row['nombre']."</td>";
+                                echo "<td>".$row['instructor']."</td>";
+                                echo "<td>".$row['horario']."</td>";
+                                echo "<td>".$row['descripcion']."</td>";
+                                echo "</tr>";
+                            }
+                        }
+                    ?>
+                </thead>
+                   
+            </table>    
+            </div>
         </div>
     </body>
 </html>
