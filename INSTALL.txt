@@ -5,3 +5,5 @@ Cree una base de datos con el nombre "lcc".
 Exporte el script "lcc(1).sql" contenido en el repositorio con su gestor de base de datos ("phpmyadmin" por ejemplo).
 Ingrese al index del sistema (http://localhost/xxx/xxx/index.php)
 Para ingresar como administrador del sistema, ingrese con la matricula a212209119 y la contrasena "algo".
+
+Nota: El usuario para la conexion a la base de datos es: "root", y la contrasena: ""
